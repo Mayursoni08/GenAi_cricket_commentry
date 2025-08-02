@@ -7,7 +7,7 @@ This project uses multimodal AI models to generate cricket commentary from video
 
 Model trained on cricket commentary data using LLaVA.
 
-👉 [View on Hugging Face](https://huggingface.co/Mayursoni08/llava-commentary-gen)
+👉 [View on Hugging Face](https://huggingface.co/may-ur08/llava-commentary-gen)
 
 ## 📂 Structure
 
