@@ -1,0 +1,61 @@
+{
+  "crop_size": {
+    "height": 336,
+    "width": 336
+  },
+  "data_format": "channels_first",
+  "default_to_square": false,
+  "device": null,
+  "do_center_crop": true,
+  "do_convert_rgb": true,
+  "do_normalize": true,
+  "do_pad": true,
+  "do_rescale": true,
+  "do_resize": true,
+  "do_sample_frames": false,
+  "fps": null,
+  "image_grid_pinpoints": [
+    [
+      336,
+      672
+    ],
+    [
+      672,
+      336
+    ],
+    [
+      672,
+      672
+    ],
+    [
+      1008,
+      336
+    ],
+    [
+      336,
+      1008
+    ]
+  ],
+  "image_mean": [
+    0.48145466,
+    0.4578275,
+    0.40821073
+  ],
+  "image_processor_type": "LlavaNextImageProcessor",
+  "image_std": [
+    0.26862954,
+    0.26130258,
+    0.27577711
+  ],
+  "input_data_format": null,
+  "num_frames": null,
+  "processor_class": "LlavaNextVideoProcessor",
+  "resample": 3,
+  "rescale_factor": 0.00392156862745098,
+  "size": {
+    "shortest_edge": 336
+  },
+  "size_divisor": null,
+  "video_metadata": null,
+  "video_processor_type": "LlavaNextVideoVideoProcessor"
+}
