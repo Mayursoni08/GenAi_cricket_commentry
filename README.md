@@ -20,5 +20,5 @@ Model trained on cricket commentary data using LLaVA.
 ## 🧠 Author
 
 Mayur Soni – [@Mayursoni08](https://github.com/Mayursoni08)
-Parl Vaghasiya gay -[@parl-07](https://github.com/parl-07)
+Parl Vaghasiya -[@parl-07](https://github.com/parl-07)
 Niskarsh - [@Niskarsh24](https://github.com/Niskarsh24)
