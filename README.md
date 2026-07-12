@@ -1,10 +1,10 @@
 <div align="center">
 
-# 🏏 AI Cricket Commentary Generator
+#  AI Cricket Commentary Generator
 
 **Turning raw cricket footage into real-time, emotion-rich commentary — automatically.**
 
-*A perception-to-cognition pipeline that watches a cricket clip, understands the shot and outcome, and narrates it like a real commentator.*
+*A multimodal AI pipeline that watches a cricket clip, understands the shot and outcome, and narrates it like a real commentator.*
 
 [![Model](https://img.shields.io/badge/Model-Qwen2.5--VL--7B-blue)](https://huggingface.co/Qwen/Qwen2.5-VL-7B-Instruct)
 [![Fine--tuned](https://img.shields.io/badge/Fine--tuned-LoRA%20%2B%20HQQ%204--bit-orange)]()
@@ -17,11 +17,11 @@
 
 ---
 
-## 📖 Overview
+##  Overview
 
 Existing cricket highlight tools stop at classification — "this was a six." This project goes further: given a short clip, it **perceives** the action (who's batting, what shot was played, what the outcome was), **reasons** over that perception with commentary-appropriate context (score, momentum, shot difficulty), and **generates spoken commentary** that sounds like it came from a real broadcast — synced back onto the original video.
 
-The system is built as a **staged pipeline** — perception, then reasoning, then generation — rather than asking one model to do everything in a single opaque pass. Splitting the problem this way made each stage independently debuggable and let each model specialize in exactly one thing.
+Rather than using one model for the entire task, the system divides the process into multiple stages. Each stage focuses on a specific task, making the pipeline more reliable, easier to debug, and simpler to extend.
 
 > **Input:** a 5–8 second cricket clip
 > **Output:** a video with synced, emotionally expressive AI commentary — shot identified, outcome called, score context included
