@@ -11,7 +11,7 @@
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/Python-3.12-yellow)]()
 
-[Demo](#demo) • [Architecture](#architecture) • [Results](#-results) • [Setup](#setup) • [Usage](#usage)
+[Demo](#demo) • [Architecture](#architecture) • [Results](#-results)  • [Usage](#usage)
 
 </div>
 
