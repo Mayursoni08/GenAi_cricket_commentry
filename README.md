@@ -26,7 +26,7 @@ Rather than using one model for the entire task, the system divides the process 
 ---
 
 ##  Demo
-> **Input:** a 5–8 second cricket clip
+> **Input:** a 5–8 second cricket clip <br>
 > **Output:** a video with synced, emotionally expressive AI commentary — shot identified, outcome called, score context included
 <!-- Replace with your actual sample video / GIF -->
 | Input Clip | Generated Commentary | Output |
@@ -93,9 +93,9 @@ Switched to **Qwen2.5-VL** as the perception backbone, fine-tuned with LoRA. Rea
 - **Absolute time encoding** for video — built to localize *when* something happens within a clip, which matters directly for a task like bowled-out clips where the ball, the shot attempt, and the wicket happen in a specific temporal sequence within one short video.
 - **Strong LoRA fine-tuning precedent at small dataset scale** — unlike training a video backbone from scratch (VideoMAE), Qwen2.5-VL already has broad visual and world knowledge from pretraining; fine-tuning only needs to teach it the task-specific vocabulary and visual patterns, which is a far more data-efficient learning problem for a ~2,600-clip dataset.
 - **One backbone, two tasks** — a single fine-tuned model handles both shot classification and outcome classification via task-specific prompts, trained on the disjoint-labeled datasets mixed into one training set, rather than needing two separately-trained models.
-
+<!-- 
 This iteration — and the debugging that came with it (overfitting from too-fast convergence, evaluation metric bugs from unfiltered model output, dataset path/integrity issues during migration between training platforms) — is reflected in the training notebooks under [`notebooks/`](notebooks/).
-
+-->
 ---
 
 ## 📊 Results
@@ -113,9 +113,12 @@ This iteration — and the debugging that came with it (overfitting from too-fas
 </div>
 
 Full evaluation artifacts — per-class F1, confusion matrices, training/validation curves, and dataset class distribution — are in [`charts/`](charts/) and on the [model card](https://huggingface.co/may-ur08/qwen2.5-vl-gen-cricket-commentary).
+<!-- 
+  This is a 
+  multi-line comment 
 
 **Why macro-F1 and MCC, not just accuracy?** The dataset has meaningful class imbalance (122–292 clips per shot class). Macro-F1 and Matthews Correlation Coefficient weight every class equally, so the reported score reflects real per-class performance rather than being dominated by the most common categories. Model selection during training used the **minimum** of the two task F1 scores, not their average — ensuring the checkpoint saved is one where *both* tasks work, not one where a strong shot-classifier is masking a weak outcome-classifier.
-
+-->
 ---
 
 ## 🛠️ Tech Stack
@@ -127,9 +130,9 @@ Full evaluation artifacts — per-class F1, confusion matrices, training/validat
 | Training Infra | Lightning AI (H100) |
 | Video Processing | `qwen-vl-utils`, `decord` |
 | Commentary LLM | Fine-tuned LoRA adapter |
-| TTS | *(fill in — e.g. Kyutai TTS / Moshi)* |
+| TTS | Kyutai TTS &gTTS |
 | Backend | *(fill in your stack)* |
-| Frontend | *(fill in your stack)* |
+| Frontend | React |
 | Experiment Tracking / Metrics | scikit-learn, matplotlib, seaborn |
 | Model Hosting | Hugging Face Hub |
 
