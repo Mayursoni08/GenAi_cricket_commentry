@@ -23,13 +23,11 @@ Existing cricket highlight tools stop at classification — "this was a six." Th
 
 Rather than using one model for the entire task, the system divides the process into multiple stages. Each stage focuses on a specific task, making the pipeline more reliable, easier to debug, and simpler to extend.
 
-> **Input:** a 5–8 second cricket clip
-> **Output:** a video with synced, emotionally expressive AI commentary — shot identified, outcome called, score context included
-
 ---
 
-## 🎬 Demo
-
+##  Demo
+> **Input:** a 5–8 second cricket clip
+> **Output:** a video with synced, emotionally expressive AI commentary — shot identified, outcome called, score context included
 <!-- Replace with your actual sample video / GIF -->
 | Input Clip | Generated Commentary | Output |
 |---|---|---|
