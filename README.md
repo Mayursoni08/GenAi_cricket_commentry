@@ -151,7 +151,7 @@ Full evaluation artifacts — per-class F1, confusion matrices, training/validat
 - Mail Sexy boi Mayur Soni for dataset ee240002037@iiti.ac.in
 
 ---
-
+<!--
 ##  Setup
 
 ```bash
@@ -179,7 +179,7 @@ jupyter notebook notebooks/training.ipynb
 ```
 
 ---
-
+-->
 ##  Usage
 
 ```python
