@@ -121,7 +121,7 @@ Full evaluation artifacts — per-class F1, confusion matrices, training/validat
 -->
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 | Component | Technology |
 |---|---|
@@ -131,7 +131,7 @@ Full evaluation artifacts — per-class F1, confusion matrices, training/validat
 | Video Processing | `qwen-vl-utils`, `decord` |
 | Commentary LLM | Fine-tuned LoRA adapter |
 | TTS | Kyutai TTS &gTTS |
-| Backend | *(fill in your stack)* |
+| Backend | |
 | Frontend | React |
 | Experiment Tracking / Metrics | scikit-learn, matplotlib, seaborn |
 | Model Hosting | Hugging Face Hub |
@@ -151,7 +151,7 @@ Full evaluation artifacts — per-class F1, confusion matrices, training/validat
 
 ---
 
-## ⚙️ Setup
+##  Setup
 
 ```bash
 git clone https://github.com/<your-username>/<your-repo>.git
@@ -179,7 +179,7 @@ jupyter notebook notebooks/training.ipynb
 
 ---
 
-## 🚀 Usage
+##  Usage
 
 ```python
 from inference import CricketCommentaryPipeline
@@ -216,7 +216,7 @@ result.save("output/commentary.mp4")  # video with synced audio commentary
 
 ---
 
-## 🎯 Key Engineering Decisions
+##  Key Engineering Decisions
 
 - **Multi-task learning over separate models** — shot and outcome classification share one fine-tuned backbone, trained on disjoint-labeled data via task-specific prompts mixed into a single training set, rather than requiring both labels on every clip.
 - **HQQ over bitsandbytes/GPTQ/AWQ for quantization** — no calibration dataset required (unlike GPTQ/AWQ), faster to quantize, and PEFT-compatible out of the box.
@@ -226,7 +226,7 @@ result.save("output/commentary.mp4")  # video with synced audio commentary
 
 ---
 
-## 🔭 Future Work
+## Future Work
 
 - [ ] Constrained decoding over the fixed label vocabulary (vs. free-form generation) to eliminate residual formatting artifacts in predictions
 - [ ] Player identification via jersey number OCR / roster matching
@@ -236,14 +236,14 @@ result.save("output/commentary.mp4")  # video with synced audio commentary
 
 ---
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - [Qwen2.5-VL](https://huggingface.co/Qwen/Qwen2.5-VL-7B-Instruct) — Alibaba's vision-language model, used as the perception backbone.
 - [HQQ](https://github.com/mobiusml/hqq) — calibration-free quantization.
 
 ---
 
-## 📄 License
+##  License
 
 This project is licensed under the [MIT License](LICENSE).
 
