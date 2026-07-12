@@ -44,7 +44,7 @@ Rather than using one model for the entire task, the system divides the process 
 
 ---
 
-## 🧠 Architecture
+## Architecture
 
 The pipeline breaks the problem into three independent, purpose-built stages rather than one end-to-end black box — each stage is easier to train, debug, and improve in isolation.
 
@@ -59,22 +59,22 @@ The pipeline breaks the problem into three independent, purpose-built stages rat
                                                                                   to clip length
 ```
 
-### 1️⃣ Perception — `Qwen2.5-VL-7B-Instruct` (fine-tuned)
+### 1) Perception — `Qwen2.5-VL-7B-Instruct` (fine-tuned)
 - Multi-task video understanding: **shot classification** (11 classes: cover drive, pull, reverse sweep, sweep, hook, flick, square cut, late cut, straight drive, defense, lofted) and **outcome classification** (four / six / bowled).
 - Fine-tuned with **LoRA** (rank 16, attention-only, vision tower frozen) on top of **HQQ 4-bit quantization** — full-precision-quality understanding at a fraction of the memory footprint.
 - Trained on ~2,600 hand-collected and labeled cricket clips across both tasks, with class-balanced weighted sampling to handle uneven category sizes.
 
-### 2️⃣ Commentary Generation — Fine-tuned LLM
+### 2) Commentary Generation — Fine-tuned LLM
 - Takes structured perception output (shot type, outcome, score context) and generates **natural, emotionally expressive commentary text** — excited for boundaries, tense for wickets, measured for defensive shots.
 - Decouples *what happened* (perception) from *how it's said* (generation) — each model only has to be good at one thing.
 
-### 3️⃣ Speech + Sync
+### 3) Speech + Sync
 - Converts generated commentary to expressive speech via TTS.
 - Aligns audio duration to the original clip length so the narration lands naturally on the action, not after it.
 
 ---
 
-## 🔄 Approach & Iterations
+##  Approach & Iterations
 
 This pipeline went through two real architecture changes before landing on the current setup — documenting them here because the *reasons* for switching are as informative as the final choice.
 
