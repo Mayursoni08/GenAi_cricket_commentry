@@ -131,8 +131,8 @@ Full evaluation artifacts — per-class F1, confusion matrices, training/validat
 | Video Processing | `qwen-vl-utils`, `decord` |
 | Commentary LLM | Fine-tuned LoRA adapter |
 | TTS | Kyutai TTS &gTTS |
-| Backend | |
-| Frontend | React |
+| Backend |Python + FastApi|
+| Frontend | React.js + vite |
 | Experiment Tracking / Metrics | scikit-learn, matplotlib, seaborn |
 | Model Hosting | Hugging Face Hub |
 
