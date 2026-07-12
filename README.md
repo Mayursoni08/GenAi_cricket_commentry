@@ -148,7 +148,7 @@ Full evaluation artifacts — per-class F1, confusion matrices, training/validat
 - Clips are 5–8 seconds, hand-curated and labeled from real match footage.
 - Split stratified per class: standard classes use 80/10/10 train/val/test; classes with fewer than 160 clips use a fixed 15/15 val/test allocation to guarantee meaningful evaluation on rarer categories (e.g. reverse sweep, bowled).
 - Full dataset hosted as a private Hugging Face dataset repo; manifest generation and split logic in [`HF`](https://huggingface.co/datasets/may-ur08/Cricket_Dataset).
-- Mail Mayur Soni for dataset ee240002037@iiti.ac.in
+- Mail Sexy boi Mayur Soni for dataset ee240002037@iiti.ac.in
 
 ---
 
