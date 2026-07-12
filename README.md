@@ -38,7 +38,7 @@ Rather than using one model for the entire task, the system divides the process 
 ### Frontend
 
 <!-- Replace with your actual screenshot -->
-![Frontend Screenshot](assets/frontend_screenshot.png)
+![Frontend Screenshot](assets/frontend.jpeg)
 
 *Upload a clip, get AI-generated commentary with synced audio — all through a clean web interface.*
 
