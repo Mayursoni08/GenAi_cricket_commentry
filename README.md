@@ -202,9 +202,9 @@ result.save("output/commentary.mp4")  # video with synced audio commentary
 ```
 .
 ├── notebooks/
-│   ├── build_manifest.ipynb       # dataset scanning, splitting, manifest generation
-│   ├── training.ipynb             # LoRA + HQQ fine-tuning pipeline
-│   └── evaluation.ipynb           # metrics, confusion matrices, charts
+│   ├── ai_gen_com_mid.ipynb                # previous approach
+│   ├── Copy_of_new_pipeline.ipynb          # end to end pipeline
+│   └── Finetuning_Script_Qwen (1).ipynb    # finetuning script
 ├── backend/                       # inference + API server
 ├── frontend/                      # web interface
 ├── sample_clips/                  # example input videos
